@@ -4,13 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-// Neon Rose SVG Component
-const NeonRose = ({ className = "w-8 h-8" }: { className?: string }) => (
+// Geometric Logo SVG Component
+const GeometricLogo = ({ className = "w-8 h-8" }: { className?: string }) => (
   <svg viewBox="0 0 32 32" className={className}>
     <defs>
-      <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stopColor="#FF10F0" />
-        <stop offset="100%" stopColor="#FF1493" />
+        <stop offset="100%" stopColor="#B026FF" />
       </linearGradient>
       <filter id="glow">
         <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
@@ -21,18 +21,21 @@ const NeonRose = ({ className = "w-8 h-8" }: { className?: string }) => (
       </filter>
     </defs>
     <g filter="url(#glow)">
-      {/* Rose petals */}
-      <ellipse cx="16" cy="12" rx="4" ry="5" fill="url(#roseGrad)" opacity="0.9"/>
-      <ellipse cx="12" cy="14" rx="4" ry="4" fill="url(#roseGrad)" opacity="0.8" transform="rotate(-30 12 14)"/>
-      <ellipse cx="20" cy="14" rx="4" ry="4" fill="url(#roseGrad)" opacity="0.8" transform="rotate(30 20 14)"/>
-      <ellipse cx="14" cy="17" rx="3.5" ry="4" fill="url(#roseGrad)" opacity="0.7" transform="rotate(-15 14 17)"/>
-      <ellipse cx="18" cy="17" rx="3.5" ry="4" fill="url(#roseGrad)" opacity="0.7" transform="rotate(15 18 17)"/>
-      <circle cx="16" cy="14" r="2" fill="#FF6AD5"/>
-      {/* Stem */}
-      <path d="M16 20 L16 28" stroke="#22AA44" strokeWidth="2" strokeLinecap="round"/>
-      {/* Leaves */}
-      <ellipse cx="13" cy="24" rx="3" ry="1.5" fill="#22AA44" transform="rotate(-30 13 24)"/>
-      <ellipse cx="19" cy="26" rx="3" ry="1.5" fill="#22AA44" transform="rotate(30 19 26)"/>
+      {/* Hexagon */}
+      <polygon
+        points="16,2 28,9 28,23 16,30 4,23 4,9"
+        fill="none"
+        stroke="url(#logoGrad)"
+        strokeWidth="2"
+      />
+      {/* Inner triangle */}
+      <polygon
+        points="16,8 24,20 8,20"
+        fill="url(#logoGrad)"
+        opacity="0.6"
+      />
+      {/* Center dot */}
+      <circle cx="16" cy="16" r="2" fill="#00D4FF"/>
     </g>
   </svg>
 );
@@ -60,7 +63,7 @@ const Navigation = () => {
       <div className="container nav-inner">
         {/* Brand */}
         <Link href="/gallery" className="nav-brand flex items-center gap-3 group">
-          <NeonRose className="w-8 h-8 transition-transform group-hover:scale-110" />
+          <GeometricLogo className="w-8 h-8 transition-transform group-hover:scale-110" />
           <span className="bg-gradient-to-r from-[#FF10F0] to-[#FF6AD5] bg-clip-text text-transparent">
             Artist Portfolio
           </span>
