@@ -30,7 +30,7 @@ export default function About() {
           </div>
 
           {/* Links */}
-          <div className="mt-12 flex gap-8">
+          <div className="mt-16 flex gap-8">
             <Link href="/contact" className="nav-link">
               Get in Touch <span className="text-pink">→</span>
             </Link>
