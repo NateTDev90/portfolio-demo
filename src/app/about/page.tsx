@@ -29,8 +29,11 @@ export default function About() {
             </p>
           </div>
 
+          {/* Spacer */}
+          <div style={{ height: '3rem' }} />
+
           {/* Links */}
-          <div className="mt-16 flex gap-8">
+          <div className="flex gap-8">
             <Link href="/contact" className="nav-link">
               Get in Touch <span className="text-pink">→</span>
             </Link>
