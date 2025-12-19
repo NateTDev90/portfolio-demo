@@ -193,8 +193,14 @@ a {
 }
 
 .nav-links {
-  display: flex;
+  display: none;
   gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+  }
 }
 
 .nav-link {
