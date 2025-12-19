@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#B026FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FF10F0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF1493;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow5">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="400" height="500" fill="#0a0a0a"/>
+  <!-- Wave pattern -->
+  <path d="M 50 200 Q 125 100 200 200 T 350 200" fill="none" stroke="url(#grad5)" stroke-width="3" filter="url(#glow5)"/>
+  <path d="M 50 240 Q 125 140 200 240 T 350 240" fill="none" stroke="#00D4FF" stroke-width="2" opacity="0.6"/>
+  <path d="M 50 280 Q 125 180 200 280 T 350 280" fill="none" stroke="#B026FF" stroke-width="1.5" opacity="0.4"/>
+  <!-- Accent dots -->
+  <circle cx="100" cy="150" r="4" fill="#FF10F0" filter="url(#glow5)"/>
+  <circle cx="200" cy="200" r="6" fill="#00D4FF" filter="url(#glow5)"/>
+  <circle cx="300" cy="150" r="4" fill="#FF10F0" filter="url(#glow5)"/>
+  <text x="200" y="420" text-anchor="middle" fill="#666" font-family="monospace" font-size="12">SAMPLE ARTWORK</text>
+</svg>
