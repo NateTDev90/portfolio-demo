@@ -18,20 +18,38 @@ A modern, minimalist portfolio template built with Next.js 16, TypeScript, and T
 - **Fonts**: Inter, JetBrains Mono
 - **Deployment**: Vercel
 
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx       # Root layout with nav/footer
+│   ├── page.tsx         # Redirects to /gallery
+│   ├── globals.css      # All styling
+│   ├── gallery/         # Portfolio grid with lightbox
+│   ├── about/           # Template description
+│   └── contact/         # Contact form
+├── components/
+│   ├── Navigation.tsx   # Header with responsive menu
+│   ├── GeometricLogo.tsx # SVG logo component
+│   └── Footer.tsx       # Footer
+├── hooks/
+│   └── useLightbox.ts   # Lightbox state management
+├── lib/
+│   └── artworks.ts      # Placeholder artwork data
+└── types/
+    └── index.ts         # Shared TypeScript interfaces
+public/
+└── artworks/            # SVG placeholder images
+```
+
 ## Quick Start
 
 ```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
+npm install      # Install dependencies
+npm run dev      # Start dev server (localhost:3000)
+npm run build    # Production build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site.
 
 ## Customization
 

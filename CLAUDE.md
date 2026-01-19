@@ -20,10 +20,15 @@ src/
 │   ├── about/           # Template description
 │   └── contact/         # Contact form
 ├── components/
-│   ├── Navigation.tsx   # Header with geometric logo + responsive menu
+│   ├── Navigation.tsx   # Header with responsive menu
+│   ├── GeometricLogo.tsx # SVG logo component
 │   └── Footer.tsx       # Footer
-└── lib/
-    └── artworks.ts      # Placeholder artwork data
+├── hooks/
+│   └── useLightbox.ts   # Lightbox state management
+├── lib/
+│   └── artworks.ts      # Placeholder artwork data
+└── types/
+    └── index.ts         # Shared TypeScript interfaces
 public/
 └── artworks/            # SVG placeholder images
 ```
@@ -40,3 +45,15 @@ npm run build    # Production build
 - Gallery grid with lightbox
 - Neon/cyberpunk color scheme
 - No password protection (public demo)
+
+## Coding Principles
+
+**Code is the comment.** Write code so clear it doesn't need comments.
+
+- **Self-documenting names**: `parseHexColor()` not `hexToRgb()`, `isMenuOpen` not `open`
+- **Single responsibility**: Each file/function does one thing. Extract when mixing concerns.
+- **Named constants over magic values**: Use descriptive constant names
+- **Semantic grouping**: Group related functionality together
+- **Types as documentation**: Interfaces describe shape, not comments
+- **No commented-out code**: Delete it. Git remembers.
+- **Comments only for "why"**: Never explain *what* code does—make the code explain itself

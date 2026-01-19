@@ -1,9 +1,6 @@
-export interface Artwork {
-  id: string;
-  title: string;
-  imageUrl: string;
-  year: string;
-}
+import type { Artwork } from '@/types'
+
+export type { Artwork }
 
 export const artworks: Artwork[] = [
   {
